@@ -1,0 +1,108 @@
+{
+  "0":{
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/400927398/competitions/400927398/plays/40092739812?lang=en&region=us",
+      "id": "40092739812",
+      "sequenceNumber": "12",
+      "type": {
+        "id": "20495",
+        "text": "Jump Pullup"
+      },
+      "text": "Maya Moore makes 18-foot two point shot",
+      "shortText": "M.  Moore makes two point shot",
+      "alternativeText": "Maya Moore makes 18-foot two point shot",
+      "shortAlternativeText": "M.  Moore makes two point shot",
+      "awayScore": 0,
+      "homeScore": 2,
+      "period": {
+        "number": 1,
+        "displayValue": "1st Quarter"
+      },
+      "clock": {
+        "value": 535.0,
+        "displayValue": "8:55"
+      },
+      "valid": true,
+      "scoringPlay": true,
+      "priority": false,
+      "scoreValue": 2,
+      "modified": "2017-05-14T23:12Z",
+      "team": {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/seasons/2017/teams/8?lang=en&region=us"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/seasons/2017/athletes/956?lang=en&region=us"
+          },
+          "position": {
+            "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/positions/7?lang=en&region=us"
+          },
+          "statistics": {
+            "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/400927398/competitions/400927398/competitors/8/roster/956/statistics/0?lang=en&region=us"
+          },
+          "order": 1,
+          "type": "shooter"
+        }
+      ],
+      "wallclock": "2017-05-14T23:12:36Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 37,
+        "y": 13
+      },
+      "pointsAttempted": 0
+    },
+  "1":{
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/400927398/competitions/400927398/plays/4009273988?lang=en&region=us",
+      "id": "4009273988",
+      "sequenceNumber": "8",
+      "type": {
+        "id": "20430",
+        "text": "RunningJumpShot"
+      },
+      "text": "Maya Moore  misses 12-foot Running Jumper",
+      "shortText": "M.  Moore  misses 12- foot Running Jumper",
+      "alternativeText": "Maya Moore  misses 12-foot Running Jumper",
+      "shortAlternativeText": "M.  Moore  misses 12- foot Running Jumper",
+      "awayScore": 0,
+      "homeScore": 0,
+      "period": {
+        "number": 1,
+        "displayValue": "1st Quarter"
+      },
+      "clock": {
+        "value": 558.0,
+        "displayValue": "9:18"
+      },
+      "valid": true,
+      "scoringPlay": false,
+      "priority": false,
+      "scoreValue": 0,
+      "modified": "2017-05-14T23:12Z",
+      "team": {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/seasons/2017/teams/8?lang=en&region=us"
+      },
+      "participants": [
+        {
+          "athlete": {
+            "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/seasons/2017/athletes/956?lang=en&region=us"
+          },
+          "position": {
+            "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/positions/7?lang=en&region=us"
+          },
+          "statistics": {
+            "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/events/400927398/competitions/400927398/competitors/8/roster/956/statistics/0?lang=en&region=us"
+          },
+          "order": 1,
+          "type": "shooter"
+        }
+      ],
+      "wallclock": "2017-05-14T23:12:04Z",
+      "shootingPlay": true,
+      "coordinate": {
+        "x": 36,
+        "y": 4
+      },
+      "pointsAttempted": 0
+    }
+}

@@ -1,0 +1,52 @@
+services:
+  wnba-db:
+    image: postgres:17
+    hostname: wnba_db
+    restart: always
+    shm_size: 128mb
+    volumes:
+      - ./database/creation.sql:/docker-entrypoint-initdb.d/init.sql
+    env_file:
+      - .db.env
+    ports:
+    - "5432:5432"
+
+  wnba-db-admin:
+    image: dpage/pgadmin4
+    depends_on:
+      - wnba-db
+    restart: always
+    env_file:
+      - .db.env
+    ports:
+      - "8888:80"
+  
+  wnba-pipeline:
+    build:
+      context: ./pipeline
+      dockerfile: Dockerfile
+    depends_on:
+      - wnba-db
+    volumes:
+      - ./pipeline:/pipeline 
+    env_file:
+      - .db.env
+    # environment:
+    #   - DATABASE_URL=postgres://postgres:postgres@db:5432/wnba_db
+
+  test-wnba-pipeline:
+    build:
+      context: ./pipeline
+      dockerfile: Dockerfile.test
+    volumes:
+      - ./pipeline:/pipeline 
+    command: sleep infinity
+    env_file:
+      - .db.env
+    
+    
+
+
+  # wnba-data-pipeline:
+  #   depends_on:
+  #     - wnba-db

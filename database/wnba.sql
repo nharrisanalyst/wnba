@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS teams (
 
 CREATE TABLE IF NOT EXISTS seasons (
 season_id int primary key,
-season int not null
+season smallint not null
 );
 
 create table if not exists players (
@@ -29,9 +29,8 @@ create table if not exists season_team_players (
   season_teams_id int references season_teams(season_teams_id),
   player_id int references players(player_id),
   start_date date not null,
-  end_date  date,
-  
-);
+  end_date  date not null
+)
 
 commit;
 
