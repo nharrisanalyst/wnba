@@ -1,9 +1,11 @@
 services:
   wnba-db:
     image: postgres:17
-    hostname: wnba-db
+    hostname: wnba_db
     restart: always
     shm_size: 128mb
+    volumes:
+      - ./database/creation.sql:/docker-entrypoint-initdb.d/init.sql
     env_file:
       - .db.env
     ports:
@@ -23,6 +25,8 @@ services:
     build:
       context: ./pipeline
       dockerfile: Dockerfile
+    depends_on:
+      - wnba-db
     volumes:
       - ./pipeline:/pipeline 
     env_file:
